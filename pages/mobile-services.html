@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentaCare - Mobile Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 10px;
+        }
+        
+        .mobile-frame {
+            max-width: 375px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 40px;
+            border: 8px solid #333;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .status-bar {
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+        }
+        
+        .content {
+            padding: 15px;
+            height: 600px;
+            overflow-y: auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+        }
+        
+        .service-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .service-card h3 {
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 11px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .service-price {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        
+        .book-btn {
+            width: 100%;
+            padding: 8px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .book-btn:hover {
+            background: #764ba2;
+        }
+        
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: white;
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+            position: sticky;
+            bottom: 0;
+        }
+        
+        .nav-item {
+            text-align: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 11px;
+            flex: 1;
+        }
+        
+        .nav-item.active {
+            color: #667eea;
+        }
+        
+        .nav-icon {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px 15px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>📶 📡 🔋</span>
+        </div>
+        
+        <div class="header">
+            <h1>🔧 Our Services</h1>
+        </div>
+        
+        <div class="content">
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Checkup & Cleaning</h3>
+                <p>Regular dental checkups and professional cleaning</p>
+                <div class="service-price">$60</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3>Filling</h3>
+                <p>Professional filling treatments for cavities</p>
+                <div class="service-price">$120</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Extraction</h3>
+                <p>Safe and gentle tooth extraction services</p>
+                <div class="service-price">$150</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Root Canal</h3>
+                <p>Expert root canal treatment to save your tooth</p>
+                <div class="service-price">$350</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">👑</div>
+                <h3>Crown & Bridge</h3>
+                <p>Custom crowns and bridges for missing teeth</p>
+                <div class="service-price">$400</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">😁</div>
+                <h3>Teeth Whitening</h3>
+                <p>Professional teeth whitening service</p>
+                <div class="service-price">$200</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+        
+        <div class="bottom-nav">
+            <a href="mobile-home.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                Home
+            </a>
+            <a href="mobile-book.html" class="nav-item">
+                <span class="nav-icon">📅</span>
+                Book
+            </a>
+            <a href="mobile-appointments.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                Appointments
+            </a>
+            <a href="mobile-services.html" class="nav-item active">
+                <span class="nav-icon">🔧</span>
+                Services
+            </a>
+        </div>
+    </div>
+    
+    <a href="../index.html" class="back-link">← Back to Home</a>
+</body>
+</html>
