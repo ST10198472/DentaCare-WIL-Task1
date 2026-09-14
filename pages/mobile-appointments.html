@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentaCare - Mobile Appointments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 10px;
+        }
+        
+        .mobile-frame {
+            max-width: 375px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 40px;
+            border: 8px solid #333;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .status-bar {
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+        }
+        
+        .content {
+            padding: 15px;
+            height: 600px;
+            overflow-y: auto;
+        }
+        
+        .appointment-card {
+            background: white;
+            padding: 12px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .appointment-card h3 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .appointment-card p {
+            color: #666;
+            font-size: 12px;
+            margin: 2px 0;
+        }
+        
+        .appointment-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .mini-btn {
+            flex: 1;
+            padding: 6px;
+            font-size: 11px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .reschedule-btn {
+            background: #667eea;
+            color: white;
+        }
+        
+        .cancel-btn {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin: 15px 0 10px 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+        
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: white;
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+            position: sticky;
+            bottom: 0;
+        }
+        
+        .nav-item {
+            text-align: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 11px;
+            flex: 1;
+        }
+        
+        .nav-item.active {
+            color: #667eea;
+        }
+        
+        .nav-icon {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px 15px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>📶 📡 🔋</span>
+        </div>
+        
+        <div class="header">
+            <h1>📋 My Appointments</h1>
+        </div>
+        
+        <div class="content">
+            <div class="section-title">Upcoming (3)</div>
+            
+            <div class="appointment-card">
+                <h3>Checkup & Cleaning</h3>
+                <p><strong>Sept 20, 2026</strong></p>
+                <p>10:00 AM</p>
+                <p>Dr. Smith</p>
+                <div class="appointment-actions">
+                    <button class="mini-btn reschedule-btn">Reschedule</button>
+                    <button class="mini-btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+            
+            <div class="appointment-card">
+                <h3>Filling</h3>
+                <p><strong>Sept 25, 2026</strong></p>
+                <p>2:00 PM</p>
+                <p>Dr. Johnson</p>
+                <div class="appointment-actions">
+                    <button class="mini-btn reschedule-btn">Reschedule</button>
+                    <button class="mini-btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+            
+            <div class="appointment-card">
+                <h3>Root Canal</h3>
+                <p><strong>Oct 5, 2026</strong></p>
+                <p>11:00 AM</p>
+                <p>Dr. Williams</p>
+                <div class="appointment-actions">
+                    <button class="mini-btn reschedule-btn">Reschedule</button>
+                    <button class="mini-btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+            
+            <div class="section-title">Past (2)</div>
+            
+            <div class="appointment-card" style="border-left-color: #ccc; opacity: 0.7;">
+                <h3>Teeth Cleaning</h3>
+                <p><strong>Sept 10, 2026</strong></p>
+                <p>Completed with Dr. Smith</p>
+            </div>
+        </div>
+        
+        <div class="bottom-nav">
+            <a href="mobile-home.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                Home
+            </a>
+            <a href="mobile-book.html" class="nav-item">
+                <span class="nav-icon">📅</span>
+                Book
+            </a>
+            <a href="mobile-appointments.html" class="nav-item active">
+                <span class="nav-icon">📋</span>
+                Appointments
+            </a>
+            <a href="mobile-services.html" class="nav-item">
+                <span class="nav-icon">🔧</span>
+                Services
+            </a>
+        </div>
+    </div>
+    
+    <a href="../index.html" class="back-link">← Back to Home</a>
+</body>
+</html>
