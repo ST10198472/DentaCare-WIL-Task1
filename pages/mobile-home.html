@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>DentaCare Mobile</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f1f5f9; max-width: 420px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; }
+    .status { background: #1B4F72; color: white; padding: 6px 16px; font-size: 12px; display: flex; justify-content: space-between; }
+    .header { background: white; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+    .header h1 { font-size: 1.2rem; color: #1B4F72; }
+    .content { flex: 1; padding: 16px; }
+    .card { background: white; border-radius: 14px; padding: 18px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .label { font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card h2 { color: #1B4F72; font-size: 1.1rem; margin: 4px 0; }
+    .card p { color: #64748b; font-size: 0.9rem; }
+    .actions { display: flex; gap: 10px; margin-top: 14px; }
+    .btn { flex: 1; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-align: center; border: none; }
+    .btn-outline { background: white; color: #1B4F72; border: 1.5px solid #1B4F72; }
+    .btn-primary { background: #1B4F72; color: white; }
+    .quick { background: linear-gradient(135deg, #1B4F72, #2874A6); color: white; border-radius: 14px; padding: 20px; text-align: center; margin-bottom: 14px; }
+    .quick h3 { margin-bottom: 6px; }
+    .quick .btn { background: white; color: #1B4F72; margin-top: 12px; width: 100%; }
+    .bottom { background: white; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-around; padding: 10px 0 18px; }
+    .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #64748b; text-decoration: none; gap: 3px; }
+    .nav-item.active { color: #1B4F72; font-weight: 600; }
+    .nav-item span { font-size: 1.25rem; }
+  </style>
+</head>
+<body>
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+  <div class="header">
+    <h1>🦷 DentaCare</h1>
+    <span style="font-size:1.3rem;">🔔</span>
+  </div>
+  <div class="content">
+    <div class="card">
+      <div class="label">Next Appointment</div>
+      <h2>Routine Check-up</h2>
+      <p>Thu 18 Sep · 10:00 · Dr. Nkosi</p>
+      <div class="actions">
+        <button class="btn btn-outline">Reschedule</button>
+        <button class="btn btn-primary">Directions</button>
+      </div>
+    </div>
+    <div class="quick">
+      <h3>Need to book?</h3>
+      <p style="opacity:0.9; font-size:0.9rem;">Takes less than 2 minutes</p>
+      <button class="btn">Book Appointment</button>
+    </div>
+    <p style="font-size:0.85rem; color:#64748b; margin-bottom:8px;">Recent activity</p>
+    <div class="card" style="opacity:0.85;">
+      <h2 style="font-size:1rem;">Teeth Whitening</h2>
+      <p>Completed · 12 June 2026</p>
+    </div>
+  </div>
+  <div class="bottom">
+    <a href="#" class="nav-item active"><span>🏠</span>Home</a>
+    <a href="#" class="nav-item"><span>📅</span>Book</a>
+    <a href="#" class="nav-item"><span>📋</span>Appts</a>
+    <a href="#" class="nav-item"><span>🦷</span>Services</a>
+    <a href="#" class="nav-item"><span>👤</span>Profile</a>
+  </div>
+</body>
+</html>
