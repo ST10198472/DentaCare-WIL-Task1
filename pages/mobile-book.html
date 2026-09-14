@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Book – DentaCare Mobile</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f1f5f9; max-width: 420px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; }
+    .status { background: #1B4F72; color: white; padding: 6px 16px; font-size: 12px; display: flex; justify-content: space-between; }
+    .header { background: white; padding: 14px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #e2e8f0; }
+    .header h1 { font-size: 1.15rem; color: #1B4F72; }
+    .back { font-size: 1.3rem; color: #1B4F72; text-decoration: none; }
+    .content { flex: 1; padding: 16px; }
+    .steps { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 0.7rem; color: #94a3b8; }
+    .step { text-align: center; flex: 1; }
+    .step.active { color: #1B4F72; font-weight: 600; }
+    .step-num { width: 26px; height: 26px; border-radius: 50%; background: #e2e8f0; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 3px; font-weight: 600; font-size: 0.8rem; }
+    .step.active .step-num { background: #1B4F72; color: white; }
+    .card { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    label { display: block; font-weight: 500; margin-bottom: 6px; font-size: 0.85rem; color: #334155; }
+    select, input, textarea { width: 100%; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 0.95rem; margin-bottom: 14px; background: white; }
+    .btn { display: block; width: 100%; padding: 14px; background: #1B4F72; color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; text-align: center; margin-top: 8px; }
+    .bottom { background: white; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-around; padding: 10px 0 18px; }
+    .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #64748b; text-decoration: none; gap: 3px; }
+    .nav-item.active { color: #1B4F72; font-weight: 600; }
+    .nav-item span { font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+  <div class="header">
+    <a href="#" class="back">←</a>
+    <h1>Book Appointment</h1>
+  </div>
+  <div class="content">
+    <div class="steps">
+      <div class="step active"><div class="step-num">1</div>Service</div>
+      <div class="step"><div class="step-num">2</div>Dentist</div>
+      <div class="step"><div class="step-num">3</div>Date</div>
+      <div class="step"><div class="step-num">4</div>Confirm</div>
+    </div>
+    <div class="card">
+      <label>Service</label>
+      <select>
+        <option>-- Select service --</option>
+        <option>Routine Check-up (R450)</option>
+        <option>Composite Filling (from R650)</option>
+        <option>Root Canal (from R2,800)</option>
+        <option>Teeth Whitening (from R1,200)</option>
+      </select>
+      <label>Preferred Dentist</label>
+      <select>
+        <option>Any available</option>
+        <option>Dr. Nkosi</option>
+        <option>Dr. Naidoo</option>
+      </select>
+      <label>Preferred Date</label>
+      <input type="date" value="2026-09-18">
+      <label>Time Slot</label>
+      <select>
+        <option>-- Select time --</option>
+        <option>09:00</option>
+        <option>10:00</option>
+        <option>11:30</option>
+        <option>14:00</option>
+        <option>15:30</option>
+      </select>
+      <label>Notes (optional)</label>
+      <textarea rows="2" placeholder="Any special requests..."></textarea>
+      <button class="btn">Continue</button>
+    </div>
+  </div>
+  <div class="bottom">
+    <a href="#" class="nav-item"><span>🏠</span>Home</a>
+    <a href="#" class="nav-item active"><span>📅</span>Book</a>
+    <a href="#" class="nav-item"><span>📋</span>Appts</a>
+    <a href="#" class="nav-item"><span>🦷</span>Services</a>
+    <a href="#" class="nav-item"><span>👤</span>Profile</a>
+  </div>
+</body>
+</html>
