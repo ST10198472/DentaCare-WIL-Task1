@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment – DentaCare</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f0f7fc; }
+    .navbar { background: #1B4F72; color: white; padding: 14px 16px; }
+    .logo { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: white; }
+    .container { padding: 24px 16px; max-width: 500px; margin: 0 auto; }
+    .steps { display: flex; justify-content: space-between; margin-bottom: 28px; font-size: 0.8rem; color: #94a3b8; }
+    .step { text-align: center; flex: 1; }
+    .step.active { color: #1B4F72; font-weight: 600; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: #e2e8f0; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 4px; font-weight: 600; }
+    .step.active .step-num { background: #1B4F72; color: white; }
+    .card { background: white; border-radius: 16px; padding: 28px 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    h2 { color: #1B4F72; margin-bottom: 6px; }
+    .subtitle { color: #64748b; margin-bottom: 24px; font-size: 0.95rem; }
+    label { display: block; font-weight: 500; margin-bottom: 6px; font-size: 0.9rem; }
+    select, input, textarea { width: 100%; padding: 12px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 1rem; margin-bottom: 16px; background: white; }
+    .btn { display: block; width: 100%; padding: 14px; background: #1B4F72; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html" class="logo">🦷 DentaCare</a>
+  </div>
+  <div class="container">
+    <div class="steps">
+      <div class="step active"><div class="step-num">1</div>Service</div>
+      <div class="step"><div class="step-num">2</div>Dentist</div>
+      <div class="step"><div class="step-num">3</div>Date</div>
+      <div class="step"><div class="step-num">4</div>Confirm</div>
+    </div>
+    <div class="card">
+      <h2>Select a Service</h2>
+      <p class="subtitle">Choose the treatment you need</p>
+      <label>Service</label>
+      <select>
+        <option>-- Select service --</option>
+        <option>Routine Check-up &amp; Cleaning (R450)</option>
+        <option>Composite Filling (from R650)</option>
+        <option>Root Canal Treatment (from R2,800)</option>
+        <option>Teeth Whitening (from R1,200)</option>
+      </select>
+      <label>Preferred Dentist (optional)</label>
+      <select>
+        <option>Any available dentist</option>
+        <option>Dr. Nkosi</option>
+        <option>Dr. Naidoo</option>
+      </select>
+      <label>Preferred Date</label>
+      <input type="date">
+      <label>Available Time Slots</label>
+      <select>
+        <option>-- Select time --</option>
+        <option>09:00</option>
+        <option>10:00</option>
+        <option>11:30</option>
+        <option>14:00</option>
+        <option>15:30</option>
+      </select>
+      <label>Additional notes (optional)</label>
+      <textarea rows="3" placeholder="Any special requests..."></textarea>
+      <button class="btn">Confirm Appointment</button>
+    </div>
+  </div>
+</body>
+</html>
